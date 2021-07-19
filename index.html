@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1 class="intro">Let's Count it</h1>
+    <div id="digital_clock" class="clocks">
+
+    </div>
+    <script type="text/javascript">
+      function Showtime(){
+        var time = new Date()
+        var hour = time.getHours();
+        var minute = time.getMinutes();
+        var second = time.getSeconds();
+
+        var session = "AM";
+// 12 hours or 24 hours format
+        if(hour==0){
+          hour = 12;
+        }
+
+        if(hour>12){
+          hour = hour-12;
+          session = "PM";
+        }
+        //double or single number
+        if(hour<10){ //0 to 9
+          hour = '0'+hour;
+        }
+        if(minute<10){ //0 to 9
+          minute = '0'+minute;
+        }
+        if(second<10){ //0 to 9
+          second = '0'+second;
+        }
+
+
+
+
+        document.getElementById("digital_clock").innerHTML = hour + ":"
++minute+":"+second +" "+session ;
+        setTimeout(Showtime,1000);
+     }
+
+     Showtime();
+    </script>
+  </body>
+</html>

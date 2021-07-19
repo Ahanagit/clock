@@ -1,0 +1,25 @@
+body{
+  text-align: center;
+  background-color:#FF6767;
+}
+.clocks{
+  background-color: black;
+  color: lime;
+  font-size: 2rem;
+  margin: 10% 40%;
+  padding: 3%;
+  border-radius: 100%;
+}
+.intro{
+  margin:40px auto auto;
+  color:black;
+  
+
+}
+@media (max-width:1028px) {
+  .clocks{
+    font-size: 1.5rem;
+    margin: 20% 20%;
+    border-radius: 60%;
+  }
+}
